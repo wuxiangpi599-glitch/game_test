@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>21岁生日快乐！</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'pixel': ['"Press Start 2P"', '"DotGothic16"', 'monospace'],
+            },
+            colors: {
+              'pixel-pink': '#FFC0CB',
+              'pixel-pink-dark': '#FF69B4',
+              'pixel-purple': '#E0B0FF',
+              'pixel-purple-dark': '#9370DB',
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #ffe6f2; /* Light pink background */
+        font-family: 'DotGothic16', sans-serif;
+      }
+
+      /* Pixel Art Cursor */
+      body, button {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewport="0 0 24 24" fill="%239370DB"><path d="M0 0h2v2H0zm2 2h2v2H2zm2 2h2v2H4zm2 2h2v2H6z"/></svg>') 0 0, auto;
+      }
+
+      .pixel-shadow {
+        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.2);
+      }
+      
+      .pixel-text-shadow {
+        text-shadow: 2px 2px 0px rgba(147, 112, 219, 0.3);
+      }
+
+      @keyframes fall {
+        0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+        10% { opacity: 1; }
+        100% { transform: translateY(110vh) rotate(360deg); opacity: 1; }
+      }
+
+      .falling-item {
+        position: absolute;
+        will-change: transform;
+        cursor: pointer;
+        user-select: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
